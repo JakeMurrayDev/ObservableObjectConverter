@@ -51,7 +51,8 @@ namespace ObservableObjectConverter
             for (int i = 0; i < properties.Length; i++)
             {
                 var property = properties[i];
-                if (string.IsNullOrWhiteSpace(property) || (property.Contains('[') && property.Contains("]")))
+                var isAttribute = property.Contains('[') && property.Contains("]");
+                if (string.IsNullOrWhiteSpace(property) || isAttribute)
                 {
                     continue;
                 }
