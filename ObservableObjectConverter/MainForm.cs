@@ -41,6 +41,7 @@ namespace ObservableObjectConverter
         {
             _backingFields = new();
             _observables = new();
+            observableRichTxtBox.Text = string.Empty;
             GetObservableProperties();
             ApplyObservableProperties();
         }
